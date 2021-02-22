@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Hamburger from './Hamburger';
 
 const navList = [{ name: 'Clock', path: '/' },
-{ name: 'test1', path: '/placki' },
+{ name: 'To do list', path: '/toDoList' },
 { name: 'test2', path: '/maslo' }];
 
 

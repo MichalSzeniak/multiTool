@@ -3,10 +3,8 @@
   max-width: 960px;
   height: 100vh;
   margin: 0 auto;
-  background-image: url(../Assets/background-img.jpg);
-  background-size: cover;
+  // background-image: url(../Assets/background-img.jpg);
 
-  @media(max-height: 700px) {
-    background-size: cover;
-  }
+  background: url(../Assets/background-img.jpg) center;
+  background-size: cover;
 }

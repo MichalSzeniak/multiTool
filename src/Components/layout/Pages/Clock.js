@@ -4,8 +4,10 @@ const Clock = () => {
   const [date, setDate] = useState(new Date());
 
   useEffect(() => {
-    const timerID = setInterval(() => dateUpdate(), 1000);
-  });
+    const interval = setInterval(() => dateUpdate(), 1000);
+    return () => clearInterval(interval)
+  }, []
+  );
 
   const dateUpdate = () => {
     setDate(new Date());
