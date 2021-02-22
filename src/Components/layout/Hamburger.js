@@ -1,10 +1,7 @@
 import React, {useState} from 'react'
 
-const Hamburger = ({hamburgerActive, sethamburgerActive}) => {
+const Hamburger = ({handleHamburger, hamburgerActive}) => {
 
-    const handleHamburger = () => {
-        sethamburgerActive(!hamburgerActive)
-    }
 
     return (
         <button className={hamburgerActive ? "hamburger hamburger__active" : "hamburger"} onClick={handleHamburger}>

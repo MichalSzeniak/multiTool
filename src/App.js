@@ -1,7 +1,8 @@
-import './App.scss';
+import './scss/App.scss';
 import { BrowserRouter as Router } from 'react-router-dom';
 
 import Navigation from './Components/layout/Navigation';
+import Page from './Components/layout/Page';
 
 function App() {
   return (
@@ -10,7 +11,9 @@ function App() {
         <header>
           <Navigation />
         </header>
-
+        <main>
+          <Page/>
+        </main>
       </div>
     </Router>
   );

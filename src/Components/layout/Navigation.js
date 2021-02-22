@@ -3,26 +3,32 @@ import { NavLink } from 'react-router-dom';
 import Hamburger from './Hamburger';
 
 const navList = [{ name: 'Clock', path: '/' },
-{ name: 'test1', path: '/' },
-{ name: 'test2', path: '/' }];
+{ name: 'test1', path: '/placki' },
+{ name: 'test2', path: '/maslo' }];
 
 
-const navigationItems = navList.map((item) => (
-    <NavLink className="navigation__link" to={item.path}>
-  <li className="navigation__list--item" key={item.name}>
-    {item.name}
-  </li>
-  </NavLink>
-));
+
 
 const Navigation = () => {
   const [hamburgerActive, sethamburgerActive] = useState(false);
 
+  const handleHamburger = () => {
+    sethamburgerActive(!hamburgerActive)
+}
+
+const navigationItems = navList.map((item) => (
+  <NavLink className="navigation__link" exact to={item.path} onClick={handleHamburger} key={item.name}>
+<li className="navigation__list--item">
+  {item.name}
+</li>
+</NavLink>
+));
+
   return (
     <div>
       <Hamburger
-        hamburgerActive={hamburgerActive}
-        sethamburgerActive={sethamburgerActive}
+      handleHamburger={handleHamburger}
+      hamburgerActive={hamburgerActive}
       />
       <nav
         className={
