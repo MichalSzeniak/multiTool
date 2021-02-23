@@ -4,12 +4,11 @@ const TodoTasks = ({ todoList, setTodoList, }) => {
 
 
   return (
-    <div>
+    <ul className="list">
         {todoList.map(item => (
-            <Task key={item.key} task={item} setTodoList={setTodoList} todoList={todoList}/>
+            <Task key={item.key} status={item.status} task={item} setTodoList={setTodoList} todoList={todoList}/>
         ))}
-    </div>
+    </ul>
   );
 };
-
 export default TodoTasks;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import Hamburger from './Hamburger';
+import logo from '../../Assets/logo.svg';
 
 const navList = [{ name: 'Clock', path: '/' },
 { name: 'To do list', path: '/toDoList' },
@@ -30,6 +31,9 @@ const navigationItems = navList.map((item) => (
       handleHamburger={handleHamburger}
       hamburgerActive={hamburgerActive}
       />
+      <div className="logo">
+        <img src={logo}/>
+      </div>
       <nav
         className={
           hamburgerActive ? 'navigation navigation__active' : 'navigation'

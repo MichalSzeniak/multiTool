@@ -7,15 +7,15 @@ const handleInput = (e) => {
 }
 
 const handleAddTask = () => {
-    setTodoList([...todoList, {text: input, key: Math.random() * 10000}]);
+    setTodoList([...todoList, {text: input, key: Math.random() * 10000, status: false}]);
     setInput('')
 }
 
     return (
         <div>
             <form action="javascript:void(0);" onSubmit={handleAddTask}>
-                <input type="text" required placeholder="new task" value={input} onChange={handleInput} />
-                <button>Add task</button>
+                <input className="form__input" type="text" required placeholder="new task" value={input} onChange={handleInput} />
+                <button className="form__button">Add a task</button>
             </form>
         </div>
     )

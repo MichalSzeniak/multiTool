@@ -59,3 +59,9 @@
 .hamburger__active .hamburger__inner::before {
     transform: translateY(10px) rotate(-45deg);
 }
+
+.logo {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+}
