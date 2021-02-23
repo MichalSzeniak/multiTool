@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/multiTool/static/css/main.369069af.chunk.css",
+    "main.js": "/multiTool/static/js/main.840a96e1.chunk.js",
+    "main.js.map": "/multiTool/static/js/main.840a96e1.chunk.js.map",
+    "runtime-main.js": "/multiTool/static/js/runtime-main.118d7443.js",
+    "runtime-main.js.map": "/multiTool/static/js/runtime-main.118d7443.js.map",
+    "static/js/2.1fe33b97.chunk.js": "/multiTool/static/js/2.1fe33b97.chunk.js",
+    "static/js/2.1fe33b97.chunk.js.map": "/multiTool/static/js/2.1fe33b97.chunk.js.map",
+    "index.html": "/multiTool/index.html",
+    "static/css/main.369069af.chunk.css.map": "/multiTool/static/css/main.369069af.chunk.css.map",
+    "static/js/2.1fe33b97.chunk.js.LICENSE.txt": "/multiTool/static/js/2.1fe33b97.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/multiTool/static/media/background-img.7a42427b.jpg",
+    "static/media/logo.aeba2408.svg": "/multiTool/static/media/logo.aeba2408.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.118d7443.js",
+    "static/js/2.1fe33b97.chunk.js",
+    "static/css/main.369069af.chunk.css",
+    "static/js/main.840a96e1.chunk.js"
+  ]
+}
