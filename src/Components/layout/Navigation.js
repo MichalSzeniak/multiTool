@@ -5,7 +5,10 @@ import logo from '../../Assets/logo.svg';
 
 const navList = [{ name: 'Clock', path: '/' },
 { name: 'To do list', path: '/toDoList' },
-{ name: 'test2', path: '/maslo' }];
+{ name: 'stopwatch', path: '/stopwatch' },
+{ name: 'notebook', path: '/notebook' },
+{ name: 'weather', path: '/weather' },
+];
 
 
 
