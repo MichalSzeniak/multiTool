@@ -19,31 +19,52 @@ const Weather = () => {
     setInput('');
   };
 
-  const API = `${api.url}${place}&appid=${api.key}`;
+  const API = `${api.url}${place}&units=metric&appid=${api.key}`;
 
   useEffect(() => {
-      if (place) {
-    fetch(API)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        setDane({name: data.name, temp: data.main.temp });
-      });    }
-  }, [place])
-
+    if (place) {
+      fetch(API)
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data);
+          setDane({
+            name: data.name,
+            temp: `${data.main.temp.toFixed()} °C`,
+            country: data.sys.country,
+            clouds: `${data.clouds.all} %`,
+            wind: `${data.wind.speed} m/s`,
+            description: data.weather[0].description,
+          });
+        });
+    }
+  }, [place]);
 
   return (
-    <div className="list">
-        <h1>Weather</h1>
+    <div className="weather">
+      <h1 className="weather__header">Weather</h1>
       <form action="">
-        <input className="form__input" type="text" placeholder="enter your place" name="" id="" value={input} onChange={handleInput} />
-        <button className="form__button" onClick={handleClick}>Search</button>
+        <input
+          className="form__input"
+          type="text"
+          placeholder="enter your place"
+          name=""
+          id=""
+          value={input}
+          onChange={handleInput}
+        />
+        <button className="form__button" onClick={handleClick}>
+          Search
+        </button>
       </form>
-      <div>
-          <h1>
-              {dane.name}
-          </h1>
-          <h2>{dane.temp}</h2>
+      <div className="weather__content">
+        <p className="weather__content--name">{dane.name}</p>
+        <p>{dane.country}</p>
+        <p className="weather__content--temp">{dane.temp}</p>
+        <div className="others">
+          <span className="clouds">{dane.clouds}</span>
+          <span className="wind">{dane.wind}</span>
+        </div>
+        <span>{dane.description}</span>
       </div>
     </div>
   );
