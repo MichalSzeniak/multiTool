@@ -1,9 +1,6 @@
 import React, {useState} from 'react'
 
 
-
-
-
 const Task = ({task, todoList, setTodoList, status}) => {
 
 

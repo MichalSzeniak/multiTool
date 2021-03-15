@@ -5,9 +5,9 @@ import logo from '../../Assets/logo.svg';
 
 const navList = [{ name: 'Clock', path: '/' },
 { name: 'To do list', path: '/toDoList' },
-{ name: 'stopwatch', path: '/stopwatch' },
-{ name: 'notebook', path: '/notebook' },
-{ name: 'weather', path: '/weather' },
+{ name: 'Stopwatch', path: '/stopwatch' },
+{ name: 'Notebook', path: '/notebook' },
+{ name: 'Weather', path: '/weather' },
 ];
 
 

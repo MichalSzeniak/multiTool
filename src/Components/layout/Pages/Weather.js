@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
+import cloud from '../../../Assets/cloud.svg';
+import wind from '../../../Assets/wind.svg';
 
 const api = {
   key: '2faf5362af8831e653fa8cc1ca8dd326',
-  url: 'http://api.openweathermap.org/data/2.5/weather?q=',
+  url: 'https://api.openweathermap.org/data/2.5/weather?q=',
 };
 
 const Weather = () => {
@@ -29,11 +31,11 @@ const Weather = () => {
           console.log(data);
           setDane({
             name: data.name,
-            temp: `${data.main.temp.toFixed()} °C`,
+            temp: `${data.main.temp.toFixed()}°C`,
             country: data.sys.country,
             clouds: `${data.clouds.all} %`,
-            wind: `${data.wind.speed} m/s`,
-            description: data.weather[0].description,
+            wind: `${data.wind.speed.toFixed(1)} m/s`,
+            description: `${data.weather[0].description}`,
           });
         });
     }
@@ -60,9 +62,15 @@ const Weather = () => {
         <p className="weather__content--name">{dane.name}</p>
         <p>{dane.country}</p>
         <p className="weather__content--temp">{dane.temp}</p>
-        <div className="others">
-          <span className="clouds">{dane.clouds}</span>
-          <span className="wind">{dane.wind}</span>
+        <div className={place ? "weather__other-content" : "none"}>
+          <div className="weather__box">
+            <img className="weather__img" src={cloud}/>
+            <span className="clouds">{dane.clouds}</span>
+          </div>
+          <div className="weather__box">
+          <img className="weather__img" src={wind}/>
+            <span className="wind">{dane.wind}</span>
+          </div>
         </div>
         <span>{dane.description}</span>
       </div>
