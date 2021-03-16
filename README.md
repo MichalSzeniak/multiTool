@@ -1,4 +1,12 @@
-# Getting Started with Create React App
+# multifunctional application
+## See [DEMO](https://michalszeniak.github.io/multiTool).
+
+## Tech stack
+* HTML
+* Sass
+* React
+* React Router
+* npm
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
