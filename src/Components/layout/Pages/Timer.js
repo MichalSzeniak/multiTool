@@ -113,7 +113,7 @@ const Timer = () => {
         </div>
       </div>
       <div className="timer__buttons">
-        <button className="button" onClick={handleActive}>
+        <button disabled={seconds === 0 && minutes === 0 && hours === 0 && 'true'} className="button" onClick={handleActive}>
           {active ? 'Stop' : 'Start'}
         </button>
         <button className="button" onClick={handleReset}>
@@ -125,11 +125,3 @@ const Timer = () => {
 };
 
 export default Timer;
-
-{
-  /* <p>
-{hours < 10 ? `0${hours}` : hours}:
-{minutes < 10 ? `0${minutes}` : minutes}:
-{seconds < 10 ? `0${seconds}` : seconds}
-</p> */
-}

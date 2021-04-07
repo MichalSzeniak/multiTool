@@ -10,6 +10,7 @@
       }
 
     &__box {
+		margin-top: 48px;
         display: flex;
     }
 
@@ -23,6 +24,10 @@
 		 padding: 8px;
 		 margin: 8px;
 		 width: 30px;
+	 }
+
+	 &__buttons {
+		 margin: 24px;
 	 }
 
 	 &__button {
